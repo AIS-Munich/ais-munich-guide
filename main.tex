@@ -1,0 +1,52 @@
+\RequirePackage[2020-02-02]{latexrelease}
+\documentclass[11pt,twoside,a4paper]{article}
+% Packages used in this example
+\usepackage{graphicx}  % for including images
+\usepackage{microtype} % for typographical enhancements
+\usepackage{amsmath}   % for equations and mathematics
+\usepackage{hyperref}  % for hyperlinks
+\usepackage[a4paper,top=4.2cm,bottom=4.2cm,left=3.5cm,right=3.5cm]{geometry} % for setting page size and margins
+\usepackage[printwatermark]{xwatermark}
+% Custom macros used in this example document
+\newcommand{\doclink}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\graphicspath{ {./images/} }
+
+\title{Accommodation in Munich}
+\author{AIS-Munich}
+\date{October 2023}
+
+% Definition of \maketitle
+\makeatletter         
+\def\@maketitle{
+\begin{center}
+{\Huge \bfseries \sffamily \@title}\\[4ex] 
+{\Large  \@author}\\[4ex] 
+\@date\\[8ex]
+\includegraphics[width = 40mm]{logo.png}
+\end{center}}
+\makeatother
+
+
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Introduction}
+\input{./input/introduction}
+\newpage
+
+
+\section{Tips for Finding Accommodation}
+\input{./input/tipsForFindingAccommodation}
+\newpage
+
+\section{Halls of residence}
+\input{./input/hallsOfResidence}
+\newpage
+
+\section{Sample}
+\input{./input/code-samples}
+\input{./input/further-examples}
+\end{document}
